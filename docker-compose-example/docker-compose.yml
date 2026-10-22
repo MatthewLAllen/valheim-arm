@@ -1,6 +1,7 @@
 services:
   valheim_server:
-    image: tsxcloud/valheim-arm:latest
+    # image: tsxcloud/valheim-arm:latest
+    build: https://github.com/MatthewLAllen/valheim-arm.git#master:Docker
     restart: unless-stopped
     stop_grace_period: 40s
     ports:
