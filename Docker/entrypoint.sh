@@ -57,7 +57,7 @@ fi
 for attempt in $(seq 1 "${STEAMCMD_ATTEMPTS}"); do
     echo "SteamCMD attempt ${attempt}/${STEAMCMD_ATTEMPTS}"
     pkill -9 -f "/root/steamcmd/linux32/steamcmd" 2>/dev/null
-    timeout -k 5 "${STEAMCMD_TIMEOUT}" "${STEAMCMD_CMD[@]}" "${STEAMCMD_FLAGS[@]}" || true
+    timeout -k 5 "${STEAMCMD_TIMEOUT}" "${STEAMCMD_CMD[@]}" "${STEAMCMD_FLAGS[@]}"
     [ -f "${SERVER}/valheim_server.exe" ] && break
     sleep 5
 done
